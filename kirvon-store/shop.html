@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — KIRVON</title>
+  <meta name="description" content="Browse premium audio, wearables and power gear. Nationwide delivery and a 12-month warranty.">
+  <meta name="theme-color" content="#08080a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="shop">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" id="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span aria-current="page">Shop</span></nav>
+        <h1 id="shop-title">All products</h1>
+        <p class="lead" id="shop-sub">Premium audio, wearables and power gear, all in one place.</p>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-bottom:clamp(56px,8vw,96px)">
+      <div class="container">
+        <div class="shop-toolbar">
+          <div class="chips" id="cat-chips" aria-label="Filter by category"></div>
+          <div class="toolbar-right">
+            <label class="field-inline">
+              <span data-icon="search"></span>
+              <input type="search" id="shop-search" placeholder="Search products…" aria-label="Search products" autocomplete="off">
+            </label>
+            <label class="field-inline">
+              <span class="sr-only">Sort by</span>
+              <select id="shop-sort">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="rating">Top rated</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+        <div class="product-grid" id="shop-grid"></div>
+
+        <div class="empty" id="shop-empty" hidden>
+          <span class="empty-ico"><span data-icon="search"></span></span>
+          <h3>No products found</h3>
+          <p>We couldn’t find anything matching your search. Try a different keyword or clear the filters.</p>
+          <button class="btn btn-ghost" type="button" id="clear-filters">Clear filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>
